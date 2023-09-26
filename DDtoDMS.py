@@ -20,15 +20,18 @@ def DD_to_DMS(decimal_degrees, hemisphere):
     return str(degrees) + '°' + str(minutes) + "'" + str(round(seconds, 2)) + '"' + hemisphere
 
 def Validate_Input(prompt, range_start, range_end):
-   # Infinite loop continues prompts until a valid value is entered
-    while True: 
+    valid_values = ', '.join(str(i) for i in range(range_start, range_end + 1))
+    error_message = f"Invalid input. Please enter a valid value between {range_start} and {range_end} ({valid_values})."
+    
+    # Infinite loop continues prompts until a valid value is entered
+    while True:
         try:
-            value = float(input(prompt)) # Get user input as a float
-            if not (range_start <= value <= range_end): # Check if input falls in the range defined by the main method
-                raise ValueError # input is invalid
-            return value # return the validated input
-        except ValueError: # built-in exception
-            print("Invalid input. Please enter a valid value.")
+            value = float(input(prompt))  # Get user input as a float
+            if not (range_start <= value <= range_end):  # Check if input falls in the range defined by the main method
+                raise ValueError  # input is invalid
+            return value  # return the validated input
+        except ValueError:  # built-in exception
+            print(error_message)
 
 # main method
 def Convert_Coordinates():
