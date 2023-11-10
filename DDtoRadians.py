@@ -19,8 +19,6 @@ def Validate_Input():
     while True:
         try:
             dd = float(input("Enter decimal degrees: "))
-            if dd < 0 or dd > 360:
-                raise ValueError("Degrees must be between 0 and 360.")
             return dd
         except ValueError as e:
             print("Invalid input:", e)
