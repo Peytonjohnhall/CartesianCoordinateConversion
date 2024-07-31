@@ -1,10 +1,10 @@
 # Author: Peyton J. Hall (C)
 """
 This Python program converts a Decimal Degree (DD) measurement
-to Radian measurement. Radians are preferred, over degrees, in
-Calculus, because they simplify trigonometric functions and their 
-calculations, for mathematicians. Latitude and longitude can be 
-expressed in radians, as well, so this program's usage is versatile.
+to Radian measurement. Radians are preferred over degrees in
+Calculus because they simplify trigonometric functions and their 
+calculations for mathematicians. Latitude and longitude can be 
+expressed in radians as well, so this program's usage is versatile.
 """
 
 import math
